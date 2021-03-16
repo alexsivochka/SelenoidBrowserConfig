@@ -1,0 +1,69 @@
+{
+  "firefox": {
+    "default": "85.0",
+    "versions": {
+      "85.0": {
+        "image": "selenoid/vnc:firefox_84.0",
+        "port": "4444",
+        "path": "/wd/hub",
+        "env": [
+          "TZ=Europe/Kiev"
+        ],
+        "volumes": [
+          "~/selenoid/download:/home/selenium/Downloads"
+        ],
+        "tmpfs": {
+          "/tmp": "size=512m"
+        }
+      },
+      "86.0": {
+        "image": "selenoid/vnc:firefox_85.0",
+        "port": "4444",
+        "path": "/wd/hub",
+        "env": [
+          "TZ=Europe/Kiev"
+        ],
+        "volumes": [
+          "~/selenoid/download:/home/selenium/Downloads"
+        ],
+        "tmpfs": {
+          "/tmp": "size=512m"
+        }
+      }
+    }
+  },
+  "chrome": {
+    "default": "88.0",
+    "versions": {
+      "88.0": {
+        "image": "selenoid/vnc:chrome_87.0",
+        "port": "4444",
+        "volumes": [
+          "~/selenoid/download:/home/selenium/Downloads",
+          "~/selenoid/settings:/home/selenium"
+        ],
+        "env": [
+          "TZ=Europe/Kiev",
+          "LANG=ru_RU.UTF-8"
+        ],
+        "tmpfs": {
+          "/tmp": "size=512m"
+        }
+      },
+      "89.0": {
+        "image": "selenoid/vnc:chrome_88.0",
+        "port": "4444",
+        "volumes": [
+          "~/selenoid/download:/home/selenium/Downloads",
+          "~/selenoid/settings:/home/selenium"
+        ],
+        "env": [
+          "TZ=Europe/Kiev"
+        ],
+        "tmpfs": {
+          "/tmp": "size=512m"
+        }
+      }
+    }
+  }
+}
